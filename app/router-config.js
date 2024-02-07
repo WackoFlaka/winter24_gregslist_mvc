@@ -1,6 +1,7 @@
 import { CarsController } from "./controllers/CarsController.js";
 import { ExamplesController } from "./controllers/ExamplesController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { houseController } from "./controllers/houseController.js";
 import { Router } from "./utils/Router.js";
 
 
@@ -19,5 +20,10 @@ export const router = new Router([
     controllers: [CarsController],
     // NOTE filepath to our CarsView HTML file
     view: 'app/views/CarsView.html'
+  },
+  {
+    path: '#/houses',
+    controllers: [houseController],
+    view: 'app/views/HouseView.html'
   }
 ])

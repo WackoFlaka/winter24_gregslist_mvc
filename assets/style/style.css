@@ -10,15 +10,14 @@ label {
   border-radius: 50%;
 }
 
-.car-img {
+.car-img, .house-img {
   width: 25%;
   object-fit: cover;
 }
 
 
-
 @media (max-width: 767.9px) {
-  .car-img {
+  .car-img, .house-img {
     width: 100%;
   }
 }

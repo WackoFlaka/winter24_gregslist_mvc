@@ -1,0 +1,64 @@
+<div class="container">
+    <!-- ANCHOR heading for home list -->
+    <section class="row mt-3">
+        <div class="col-12">
+            <h1>HOME LISTINGS</h1>
+        </div>
+    </section>
+</div>
+
+<!-- ANCHOR form for housing list -->
+<section class="row my-3">
+    <div class="col-12 col-md-8 m-auto">
+        <div class="bg-light rounded shadow-lg p-4">
+            
+            <!-- NOTE the FORM is displayed here -->
+            <!-- TODO add a controller to the form -->
+            <form onsubmit="app.houseController.createHouse()">
+                <div class="mb-3">
+                    <label for="houseYear">Year</label>
+                    <input type="number" id="houseYear" name="year" required minlength="1900" max="2025" value="2024" placeholder="Year">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="housePrice">Price</label>
+                    <input type="number" id="housePrice" name="price" required min="0" max="10000000" placeholder="Price">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="houseImgUrl">ImgUrl</label>
+                    <input id="houseImgUrl" name="imgUrl" type="url" required maxlength="1000" placeholder="URL">
+                  </div>
+                
+                <div class="mb-3">
+                    <label for="bedroomHouse">Bedrooms</label>
+                    <input type="number" id="bedroomHouse" name="bedroom" required minlength="0" maxlength="5" placeholder="Bedrooms (0 - 5)">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="bathroomHouse">Bathrooms</label>
+                    <input type="number" id="bathroomHouse" name="bathroom" required minlength="0" maxlength="5" placeholder="Bathrooms (0 - 5)">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="sqft">SQFT</label>
+                    <input type="number" id="sqftHouse" name="sqft" required minlength="0" maxlength="1000" placeholder="SQFT">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="homeDescription">Description of House</label>
+                    <textarea id="houseDescription" name="description" class="w-100" rows="10" maxlength="1000" placeholder="Description"></textarea>
+                </div>
+                
+                <div class="text-end mb-3">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- NOTE where the cars will be displayed || more information in controller -->
+<section id="houseListings" class="row justify-content-center">
+    
+</section>
